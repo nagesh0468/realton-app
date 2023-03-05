@@ -18,10 +18,12 @@ function Header() {
        </div>
        <div>
         <ul className="flex space-x-10">
-          <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px]   ${pathMathRoute("/") && " text-black border-b-red-500" }`}
+          <li className={`cursor-pointer py-3 text-sm   text-gray-400 border-b-[3px]   ${(pathMathRoute("/") && " text-black border-b-red-500 font-bold") || "border-b-transparent" }`}
           onClick={()=>navigate("/") }  >Home</li>
-          <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] ${pathMathRoute("/offers") && " text-black border-b-red-500" }`} onClick={()=>navigate("/offers") }>Offers</li>
-          <li className={`cursor-pointer py-3 text-sm font-semibold text-gray-400 border-b-[3px] ${pathMathRoute("/sign-in") && " text-black border-b-red-500" }`} onClick={()=>navigate("/sign-in") }>Sign-In</li>
+          
+          <li className={`cursor-pointer py-3 text-sm  text-gray-400 border-b-[3px] ${(pathMathRoute("/offers") && " text-black border-b-red-500 font-bold") || "border-b-transparent" }`} onClick={()=>navigate("/offers") }>Offers</li>
+          
+          <li className={`cursor-pointer py-3 text-sm  text-gray-400 border-b-[3px] ${(pathMathRoute("/sign-in") && "text-black border-b-red-500 font-bold") || "border-b-transparent" }`} onClick={()=>navigate("/sign-in") }>Sign-In</li>
         </ul>
        </div>
       </header>
